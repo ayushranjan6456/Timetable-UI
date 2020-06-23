@@ -97,25 +97,142 @@
         </section>
         <section class="entries">
             <div class="wrapper">
-                <input class="search" type="text" id="search" placeholder="Enter name here..." />
+                <input class="search" type="text" id="search" placeholder="Search name here..." />
                 <input class="submit" type="submit" value="Search" />
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="table_list mx-auto">
-                        <table class="table table-striped table-dark table-hover" style="text-align:center;">
+                        <table class="table table-striped table-dark table-hover table-striped header-fixed" style="text-align:center;">
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>id</th>
+                                    <th>ID</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <!-- {% for tt in tt.all  %} -->
                                 <tr>
-                                    <th>{{ tt.name }}</th>
+                                    <td>{{ tt.name }}</td>
                                     <td>{{ tt.reg_no }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 2}}</td>
+                                    <td>{{ tt.reg_no 2 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 3 }}</td>
+                                    <td>{{ tt.reg_no 3 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 4 }}</td>
+                                    <td>{{ tt.reg_no 4 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 5 }}</td>
+                                    <td>{{ tt.reg_no 5 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 3 }}</td>
+                                    <td>{{ tt.reg_no 3 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 3 }}</td>
+                                    <td>{{ tt.reg_no 3 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 3 }}</td>
+                                    <td>{{ tt.reg_no 3 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 3 }}</td>
+                                    <td>{{ tt.reg_no 3 }} </td>
+
+                                    <td><button class='btn btn-info'
+                                            onclick="view_stud_tt({{tt.timetable}})">view</button>
+                                        <form method="POST" action="{% url 'delete_timetable' tt.id %}"
+                                            style="display:inline-block;">
+                                            <!-- {% csrf_token %} -->
+                                            <button class='btn btn-danger'>delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>{{ tt.name 3 }}</td>
+                                    <td>{{ tt.reg_no 3 }} </td>
 
                                     <td><button class='btn btn-info'
                                             onclick="view_stud_tt({{tt.timetable}})">view</button>
