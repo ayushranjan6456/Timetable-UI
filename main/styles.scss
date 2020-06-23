@@ -509,11 +509,13 @@ tbody tr th {
   float: left;
 }
 
-@media(max-width:425px){
+@media(max-width:550px){
   .header-fixed > tbody > tr > td{
     font-size: 12px;
   }
   .header-fixed > tbody > tr > td  .btn{
     font-size: 12px;
+    width: 75px;
+    margin: 5px 0;
   }
 }
