@@ -251,13 +251,13 @@ nav {
 }
 
 .add-form {
-  height: 90vh;
+  height: 90%;
   margin: 5vh;
 }
 
 .add-form .form {
   background-color: white;
-  height: 80vh;
+  height: 80%;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
