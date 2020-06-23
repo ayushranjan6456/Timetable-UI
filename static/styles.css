@@ -24,6 +24,74 @@ nav {
   padding: 10px;
 }
 
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+}
+
+.nav h2 {
+  display: inline-block;
+  padding: 0.45em;
+  margin: 0;
+}
+
+@media (max-width: 425px) {
+  .nav h2 {
+    font-size: 1.25em;
+  }
+}
+
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.nav ul li {
+  list-style-type: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  padding: 1em;
+  color: #363636;
+  display: inline-block;
+  border-right: 1px solid #888888;
+  -webkit-transition: background 0.5s, -webkit-transform 0.5s;
+  transition: background 0.5s, -webkit-transform 0.5s;
+  transition: background 0.5s, transform 0.5s;
+  transition: background 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: background 0.5s, transform 0.5s;
+  -moz-transition: background 0.5s, transform 0.5s;
+  -ms-transition: background 0.5s, transform 0.5s;
+  -o-transition: background 0.5s, transform 0.5s;
+}
+
+.nav ul li a:hover {
+  border-radius: 4px;
+  background: #00e6e6;
+  color: white;
+  font-weight: bold;
+  transform: scale(0.9);
+  border: none;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+@media (max-width: 425px) {
+  .nav ul li a {
+    font-size: 0.75em;
+  }
+}
+
 .loginpage .box-main {
   background-color: white;
   border-radius: 20px;
@@ -116,6 +184,66 @@ nav {
   }
 }
 
+.entries input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.entries .wrapper {
+  text-align: center;
+  position: relative;
+  height: 60px;
+  font-size: 0;
+}
+
+.entries .search {
+  padding: 0 30px;
+  font-size: 18px;
+  width: 60%;
+  max-width: 400px;
+  min-width: 200px;
+  height: 50px;
+  border: 1px solid #b3b3b3;
+  border-radius: 20px 0 0 20px;
+}
+
+.entries .submit {
+  cursor: pointer;
+  border: none;
+  color: white;
+  background: #343a40;
+  border-radius: 0 20px 20px 0;
+  padding: 15px 25px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.entries .submit:hover {
+  background-color: #252a2e;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+@media (max-width: 425px) {
+  .entries .search {
+    width: 160px;
+  }
+  .entries .submit {
+    width: 90px;
+  }
+}
+
 #textareaerror,
 #reg_no_error {
   font-size: 12px;
@@ -123,7 +251,7 @@ nav {
 }
 
 .add-form {
-  height: 100vh;
+  height: 90vh;
   margin: 5vh;
 }
 
@@ -140,6 +268,24 @@ nav {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 60%;
+  margin: 2px auto;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-box-shadow: 1px 0px 20px 10px #575757;
+          box-shadow: 1px 0px 20px 10px #575757;
+}
+
+.add-form .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .add-form label {
@@ -167,18 +313,44 @@ nav {
   resize: none;
 }
 
-@media screen and (max-width: 640px) {
-  .add-form .row {
+@media (max-width: 768px) {
+  .add-form .form {
+    width: 80%;
+  }
+  .add-form label {
     display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .add-form .form {
+    width: 95%;
   }
 }
 
 .tablecol {
   overflow: scroll;
+  overflow-y: hidden;
 }
 
 .tablecol::-webkit-scrollbar {
-  display: none;
+  background-color: rgba(255, 255, 255, 0);
+  height: 10px;
+}
+
+.tablecol::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.tablecol::-webkit-scrollbar-thumb {
+  background-color: #faaca8;
+  background-image: -webkit-gradient(linear, right top, left top, from(#faaca8), to(#bfb1ec));
+  background-image: linear-gradient(-90deg, #faaca8 0%, #bfb1ec 100%);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .tablecol .tableMain {

@@ -24,6 +24,58 @@ nav {
   padding: 10px;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  h2 {
+    display: inline-block;
+    padding: 0.45em;
+    margin: 0;
+  }
+  @media (max-width: 425px) {
+    h2 {
+      font-size: 1.25em;
+    }
+  }
+  ul {
+    display: flex;
+    margin: 0;
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        padding: 1em;
+        color: rgb(54, 54, 54);
+        display: inline-block;
+        border-right: 1px solid rgb(136, 136, 136);
+        transition: background 0.5s, transform 0.5s;
+        -webkit-transition: background 0.5s, transform 0.5s;
+        -moz-transition: background 0.5s, transform 0.5s;
+        -ms-transition: background 0.5s, transform 0.5s;
+        -o-transition: background 0.5s, transform 0.5s;
+      }
+      a:hover {
+        border-radius: 4px;
+        background: #00e6e6;
+        color: white;
+        font-weight: bold;
+        transform: scale(0.9);
+        border: none;
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+      }
+      @media (max-width: 425px) {
+        a {
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+}
+
 .loginpage {
   .box-main {
     background-color: white;
@@ -87,7 +139,6 @@ nav {
     box-shadow: 0px 4px 20px 0px #49c628a6;
     background-image: linear-gradient(135deg, #70f570 10%, #49c628 100%);
   }
-
   .col-md-5 {
     text-align: center;
     padding: 50px;
@@ -104,6 +155,62 @@ nav {
   }
 }
 
+.entries {
+  input {
+    box-sizing: border-box;
+    font-size: 13px;
+    vertical-align: top;
+  }
+  .wrapper {
+    text-align: center;
+    position: relative;
+    height: 60px;
+    font-size: 0;
+  }
+  .search {
+    padding: 0 30px;
+    font-size: 18px;
+    width: 60%;
+    max-width: 400px;
+    min-width: 200px;
+    height: 50px;
+    border: 1px solid darken(white, 30%);
+    border-radius: 20px 0 0 20px;
+  }
+  .submit {
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #343a40;
+    border-radius: 0 20px 20px 0;
+    padding: 15px 25px;
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  .submit:hover {
+    background-color: #252a2e;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  @media (max-width: 425px) {
+    .search {
+      width: 160px;
+    }
+    .submit {
+      width: 90px;
+    }
+  }
+}
+
 #textareaerror,
 #reg_no_error {
   font-size: 12px;
@@ -111,15 +218,27 @@ nav {
 }
 
 .add-form {
-  height: 100vh;
+  height: 90vh;
   margin: 5vh;
-  .form{
+  .form {
     background-color: white;
     height: 80vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 60%;
+    margin: 2px auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 1px 0px 20px 10px #575757;
+  }
+  .form-row {
+    display: flex;
+    justify-content: center;
   }
   label {
     float: left;
@@ -138,23 +257,45 @@ nav {
   .input-block:focus {
     border-bottom: 2px solid #069e2c;
     outline: none;
-  }  
-  textarea{
+  }
+  textarea {
     resize: none;
   }
-  @media screen and (max-width: 640px) {
-    .row {
+  @media (max-width: 768px) {
+    .form {
+      width: 80%;
+    }
+    label {
       display: none;
+    }
+  }
+  @media (max-width: 425px) {
+    .form {
+      width: 95%;
     }
   }
 }
 
-
 .tablecol {
   overflow: scroll;
+  overflow-y: hidden;
   &::-webkit-scrollbar {
-    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 10px;
   }
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #faaca8;
+    background-image: linear-gradient(-90deg, #faaca8 0%, #bfb1ec 100%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+  }
+
   .tableMain {
     margin-top: 10px;
     font-size: 12px;

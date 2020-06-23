@@ -10,7 +10,7 @@ function viewtt(){
     checks = checks +1
     }
     else{
-        document.getElementById('textareaerror').style.display="flex";
+        $('#textareaerror').modal('show');
     }
     patt = new RegExp(/[\d]{2}[\w]{3}[\d]{4}/);
     if(reg_no.length==9 && patt.test(reg_no)){
@@ -18,7 +18,7 @@ function viewtt(){
         checks = checks +1
     }
     else{
-        document.getElementById('reg_no_error').style.display="flex";
+        $('#reg_no_error').modal('show');
     }
     if(checks == 2){
         document.getElementById("enable").disabled = false;
