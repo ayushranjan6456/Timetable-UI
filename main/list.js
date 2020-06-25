@@ -188,3 +188,18 @@ function previewslots(){
 //     console.log(captured);
 // });
 // }
+
+
+
+
+function signup() {
+    if(document.querySelector('.signup').style.display === "block"){
+        document.querySelector('.signup').style.display = "none"
+        document.querySelector('.login').style.display = "block";
+    }
+    else{
+        document.querySelector('.signup').style.display = "block"
+        document.querySelector('.login').style.display = "none";
+    }
+
+}
