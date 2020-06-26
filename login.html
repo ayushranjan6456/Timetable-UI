@@ -25,9 +25,9 @@
   <!-- {% endif %} -->
   <div class="container">
     <div class="row align-items-center" style="height: 100vh;">
-      <div class="col-12">
+      <div class="col-md-12">
         <div class="row align-items-center box-main">
-          <div class="col-md-7" id="image">
+          <div class="col-md-6" id="image">
             <div class="info">
               <h1>Timetable Sorter.</h1>
               <p>A handy tool for the HR of the clubs. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -38,9 +38,9 @@
               alt="">
 
           </div>
-          <div class="col-md-5 box-input">
+          <div class="col-md-6 box-input">
             <form method="POST" action="{% url 'login' %}" class="login">
-              <h2>Login</h2>
+              <h3>Login</h3>
               <!-- {{ my_formset|crispy }}
                 {% csrf_token %} -->
               <div class="form-group">
@@ -51,35 +51,33 @@
                 <label for="inputPassword1">Password</label>
                 <input type="password" id="inputPassword1" placeholder="Password" name="password">
               </div>
-              <div class="row">
-                <div class="col-lg-6 col-sm-12">
+              <div class="row align-items-center">
+                <div class="col-7 text-left">
                   <a href="#">Forgot Password?</a>
                 </div>
-                <div class="col-lg-6 col-sm-12">
-                  <button type="submit" class="btn btn-secondary btn-lg btn-block"
+                <div class="col-5">
+                  <button type="submit" class="btn btn-secondary btn-sm btn-block my-auto"
                     style="display: inline;">Login</button>
                 </div>
               </div>
-              <div class="forgot" href="">Don't have an account? <strong> <a href="#" onclick="signup()"> Sign
-                    Up</a></strong></div>
             </form>
+            <div class="forgot" href="">Don't have an account? <span> <a href="#" onclick="signup()"> Sign
+              Up</a></span>
+        </div>
             <form class="signup" method="POST" action="{% url 'login' %}">
-              <h2>Signup</h2>
+              <p onclick="signup()"> &#8592; </p>
+              <h3>Signup</h3>
               <!-- {{ my_formset|crispy }}
                 {% csrf_token %} -->
               <div class="form-group">
                 <label for="inputusername">Email ID</label>
                 <input type="text" id="inputemail" placeholder="E-mail" name="email">
               </div>
-              <div class="row">
-                <div class="col-lg-6 col-sm-12">
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                  <button type="submit" class="btn btn-secondary btn-lg btn-block" style="display: inline;">Sign
-                    Up</button>
+              <div class="row justify-content-end">
+                <div class="col-5">
+                  <button type="submit" class="btn btn-secondary btn-lg btn-block" >SignUp</button>
                 </div>
               </div>
-              <div class="forgot" href="">Already have an account? <strong> <a href="#" onclick="signup()">Login</a></strong></div>
             </form>
           </div>
         </div>
