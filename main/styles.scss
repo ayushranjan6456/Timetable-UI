@@ -77,7 +77,6 @@ body {
 // }
 
 .loginpage {
-  
   .box-main {
     margin: auto auto;
     max-width: 900px;
@@ -104,7 +103,7 @@ body {
     min-height: 550px;
   }
   .info h1 {
-    font-size: 5.5vmax;
+    font-size: 5vmax;
     line-height: 1;
     font-weight: 900;
     margin-top: 100px;
@@ -120,10 +119,10 @@ body {
   .box-input {
     padding: 30px;
   }
-  .login{
+  .login {
     max-width: 350px;
     margin: 0 auto;
-    a{
+    a {
       color: gray;
     }
   }
@@ -148,7 +147,7 @@ body {
     outline: none;
     border: 1px solid #c7c7c7;
     border-radius: 5px;
-    &::placeholder{
+    &::placeholder {
       color: #c7c7c7;
     }
   }
@@ -169,6 +168,11 @@ body {
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+    transition: ease-in-out 0.15s;
+    -webkit-transition: ease-in-out 0.15s;
+    -moz-transition: ease-in-out 0.15s;
+    -ms-transition: ease-in-out 0.15s;
+    -o-transition: ease-in-out 0.15s;
   }
   button:hover {
     background-image: linear-gradient(160deg, #70f570 10%, #49c628 100%);
@@ -178,12 +182,12 @@ body {
     -moz-transition: ease-in-out 0.35s;
     -ms-transition: ease-in-out 0.35s;
     -o-transition: ease-in-out 0.35s;
-      -webkit-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
   }
-  .forgot{
+  .forgot {
     max-width: 350px;
     text-align: center;
     background-color: rgb(225, 248, 225);
@@ -192,32 +196,42 @@ body {
     border: 1px rgb(166, 241, 166) solid;
     border-radius: 10px;
     font-size: medium;
-    margin : 50px auto 0px;
-    span{
+    margin: 50px auto 0px;
+    span {
       font-weight: 750;
     }
-    a{
+    a {
       color: rgb(52, 146, 52);
     }
   }
-  .signup{
+  .signup {
     margin: 0 auto 25px;
     padding: 15px;
     display: none;
-    p{
-      display: inline;
-      font-size: x-large;
-      cursor: pointer;
-      &:hover{
-        text-shadow: rgb(109, 109, 109) 1px 1px 5px;
+    .back {
+        height: 50px;
+      p {
+        display: inline;
+        font-size: x-large;
+        cursor: pointer;
+        transition: ease-in-out 0.15s;
+        -webkit-transition: ease-in-out 0.15s;
+        -moz-transition: ease-in-out 0.15s;
+        -ms-transition: ease-in-out 0.15s;
+        -o-transition: ease-in-out 0.15s;
+        &:hover {
+          font-size: 27px;
+          transition: ease-in-out 0.15s;
+          -webkit-transition: ease-in-out 0.15s;
+          -moz-transition: ease-in-out 0.15s;
+          -ms-transition: ease-in-out 0.15s;
+          -o-transition: ease-in-out 0.15s;
+}
       }
     }
-
-    
   }
-  
-  @media screen and (max-width: 399px) {
 
+  @media screen and (max-width: 399px) {
     #image {
       display: none;
     }
@@ -228,10 +242,9 @@ body {
     .box-input {
       padding: 20px;
     }
-  
   }
 
-  @media screen and (min-width : 400px) and (max-width: 767px) {
+  @media screen and (min-width: 400px) and (max-width: 767px) {
     #image {
       display: none;
     }
@@ -241,14 +254,11 @@ body {
     .box-input {
       padding: 20px;
     }
-    .forgot{
+    .forgot {
       padding: 18px;
     }
   }
-  
 }
-
-
 
 // #textareaerror,
 // #reg_no_error {

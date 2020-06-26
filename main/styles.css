@@ -38,7 +38,7 @@ body {
 }
 
 .loginpage .info h1 {
-  font-size: 5.5vmax;
+  font-size: 5vmax;
   line-height: 1;
   font-weight: 900;
   margin-top: 100px;
@@ -126,6 +126,11 @@ body {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
+  transition: ease-in-out 0.15s;
+  -webkit-transition: ease-in-out 0.15s;
+  -moz-transition: ease-in-out 0.15s;
+  -ms-transition: ease-in-out 0.15s;
+  -o-transition: ease-in-out 0.15s;
 }
 
 .loginpage button:hover {
@@ -171,14 +176,28 @@ body {
   display: none;
 }
 
-.loginpage .signup p {
+.loginpage .signup .back {
+  height: 50px;
+}
+
+.loginpage .signup .back p {
   display: inline;
   font-size: x-large;
   cursor: pointer;
+  transition: ease-in-out 0.15s;
+  -webkit-transition: ease-in-out 0.15s;
+  -moz-transition: ease-in-out 0.15s;
+  -ms-transition: ease-in-out 0.15s;
+  -o-transition: ease-in-out 0.15s;
 }
 
-.loginpage .signup p:hover {
-  text-shadow: #6d6d6d 1px 1px 5px;
+.loginpage .signup .back p:hover {
+  font-size: 27px;
+  transition: ease-in-out 0.15s;
+  -webkit-transition: ease-in-out 0.15s;
+  -moz-transition: ease-in-out 0.15s;
+  -ms-transition: ease-in-out 0.15s;
+  -o-transition: ease-in-out 0.15s;
 }
 
 @media screen and (max-width: 399px) {
