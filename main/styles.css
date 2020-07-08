@@ -1,11 +1,95 @@
 * {
   font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
 }
 
 body {
   background-color: #7ee8fa;
   background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+}
+
+nav {
+  margin-bottom: 25px;
+}
+
+.tt_sorter {
+  padding: 10px;
+}
+
+.column {
+  width: 400px;
+  margin: auto auto;
+}
+
+.get_slots {
+  padding: 10px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+}
+
+.nav h2 {
+  display: inline-block;
+  padding: 0.45em;
+  margin: 0;
+}
+
+@media (max-width: 425px) {
+  .nav h2 {
+    font-size: 1.25em;
+  }
+}
+
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.nav ul li {
+  list-style-type: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  padding: 1em;
+  color: #363636;
+  display: inline-block;
+  border-right: 1px solid #888888;
+  -webkit-transition: background 0.5s, -webkit-transform 0.5s;
+  transition: background 0.5s, -webkit-transform 0.5s;
+  transition: background 0.5s, transform 0.5s;
+  transition: background 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: background 0.5s, transform 0.5s;
+  -moz-transition: background 0.5s, transform 0.5s;
+  -ms-transition: background 0.5s, transform 0.5s;
+  -o-transition: background 0.5s, transform 0.5s;
+}
+
+.nav ul li a:hover {
+  border-radius: 4px;
+  background: #00e6e6;
+  color: white;
+  font-weight: bold;
+  transform: scale(0.9);
+  border: none;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+@media (max-width: 425px) {
+  .nav ul li a {
+    font-size: 0.75em;
+  }
 }
 
 .loginpage .box-main {
@@ -236,87 +320,20 @@ body {
   }
 }
 
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: white;
-}
-
-.nav h2 {
-  display: inline-block;
-  padding: 0.45em;
-  margin: 0;
-}
-
-@media (max-width: 425px) {
-  .nav h2 {
-    font-size: 1.25em;
-  }
-}
-
-.nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-}
-
-.nav ul li {
-  list-style-type: none;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  padding: 1em;
-  color: #363636;
-  display: inline-block;
-  -webkit-transition: background 0.5s, -webkit-transform 0.5s;
-  transition: background 0.5s, -webkit-transform 0.5s;
-  transition: background 0.5s, transform 0.5s;
-  transition: background 0.5s, transform 0.5s, -webkit-transform 0.5s;
-  -webkit-transition: background 0.5s, transform 0.5s;
-  -moz-transition: background 0.5s, transform 0.5s;
-  -ms-transition: background 0.5s, transform 0.5s;
-  -o-transition: background 0.5s, transform 0.5s;
-}
-
-.nav ul li a:hover {
-  border-radius: 4px;
-  background: #00e6e6;
-  color: white;
-  font-weight: bold;
-  transform: scale(0.9);
-  border: none;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
-
-@media (max-width: 425px) {
-  .nav ul li a {
-    font-size: 0.75em;
-  }
-}
-
-.addoredit #textareaerror,
-.addoredit #reg_no_error {
+#textareaerror,
+#reg_no_error {
   font-size: 12px;
   display: none;
 }
 
-.addoredit .add-form {
+.add-form {
   height: 100%;
-  margin-top: 5vh;
+  margin: 5vh;
 }
 
-.addoredit .add-form .form {
+.add-form .form {
   background-color: white;
-  height: 590px;
+  height: 100%;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -327,7 +344,7 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 75%;
+  width: 60%;
   margin: 2px auto;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -336,7 +353,7 @@ body {
   -o-border-radius: 20px;
 }
 
-.addoredit .add-form .form-row {
+.add-form .form-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,34 +362,14 @@ body {
           justify-content: center;
 }
 
-.addoredit .add-form .form-row .btn {
-  margin: 0 5px;
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  transition: transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transition: transform 0.35s;
-  -moz-transition: transform 0.35s;
-  -ms-transition: transform 0.35s;
-  -o-transition: transform 0.35s;
-}
-
-.addoredit .add-form .form-row .btn:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-}
-
-.addoredit .add-form label {
+.add-form label {
   float: left;
   font-size: 20px;
   color: #8c8d8c;
   margin: 10px 0 0 0;
 }
 
-.addoredit .add-form .input-block {
+.add-form .input-block {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -381,49 +378,48 @@ body {
   border-bottom: 2px solid #b0b3b9;
 }
 
-.addoredit .add-form .input-block:focus {
+.add-form .input-block:focus {
   border-bottom: 2px solid #069e2c;
   outline: none;
 }
 
-.addoredit .add-form textarea {
+.add-form textarea {
   resize: none;
 }
 
 @media (max-width: 768px) {
-  .addoredit .add-form .form {
+  .add-form .form {
     width: 80%;
   }
-  .addoredit .add-form label {
+  .add-form label {
     display: none;
   }
 }
 
 @media (max-width: 425px) {
-  .addoredit .add-form .form {
+  .add-form .form {
     width: 95%;
   }
 }
 
-.addoredit .entries input {
+.entries input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 13px;
   vertical-align: top;
 }
 
-.addoredit .entries .wrapper {
+.entries .wrapper {
   text-align: center;
   position: relative;
-  margin-top: 5vh;
   height: 60px;
   font-size: 0;
 }
 
-.addoredit .entries .search {
+.entries .search {
   padding: 0 30px;
   font-size: 18px;
-  width: 57%;
+  width: 60%;
   max-width: 400px;
   min-width: 200px;
   height: 50px;
@@ -431,7 +427,7 @@ body {
   border-radius: 20px 0 0 20px;
 }
 
-.addoredit .entries .submit {
+.entries .submit {
   cursor: pointer;
   border: none;
   color: white;
@@ -448,7 +444,7 @@ body {
   -o-transition: 0.5s;
 }
 
-.addoredit .entries .submit:hover {
+.entries .submit:hover {
   background-color: #252a2e;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -458,31 +454,30 @@ body {
 }
 
 @media (max-width: 425px) {
-  .addoredit .entries .search {
+  .entries .search {
     width: 160px;
     font-size: 14px;
   }
-  .addoredit .entries .submit {
+  .entries .submit {
     width: 90px;
   }
 }
 
-.addoredit .tablecol {
+.tablecol {
   overflow: scroll;
   overflow-y: hidden;
-  margin: 20px;
 }
 
-.addoredit .tablecol::-webkit-scrollbar {
+.tablecol::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0);
   height: 10px;
 }
 
-.addoredit .tablecol::-webkit-scrollbar-track {
+.tablecol::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0);
 }
 
-.addoredit .tablecol::-webkit-scrollbar-thumb {
+.tablecol::-webkit-scrollbar-thumb {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#c1dfc4), to(#deecdd));
   background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
   border-radius: 15px;
@@ -492,7 +487,7 @@ body {
   -o-border-radius: 15px;
 }
 
-.addoredit .tablecol .tableMain {
+.tablecol .tableMain {
   margin-top: 10px;
   font-size: 12px;
   text-align: center;
@@ -500,88 +495,76 @@ body {
   font-weight: bold;
 }
 
-.addoredit .tablecol .tableMain::-webkit-scrollbar {
+.tablecol .tableMain::-webkit-scrollbar {
   display: none;
 }
 
-.addoredit .tablecol .tableMain table {
+.tablecol .tableMain table {
   width: 1000px;
   height: 500px;
   table-layout: fixed;
   overflow: hidden;
 }
 
-.addoredit .tablecol .tableMain table tbody {
+.tablecol .tableMain table tbody {
   background-color: black;
 }
 
-.addoredit .tablecol .tableMain table tbody td {
+.tablecol .tableMain table tbody td {
   width: 10%;
   padding: 5px;
 }
 
-.addoredit .tablecol .tableMain table tbody .blue {
+.tablecol .tableMain table tbody .blue {
   background-color: cornflowerblue;
 }
 
-.addoredit .tablecol .tableMain table tbody .red {
+.tablecol .tableMain table tbody .red {
   background-color: lightcoral;
 }
 
-.addoredit .cells_change {
+.cells_change {
   background-color: #ccff33;
   color: black;
 }
 
-.addoredit .table_list {
+.table_list {
   width: 80%;
   margin: 20px 0 0 0;
 }
 
-.addoredit .table_list .table {
+.table_list .table {
   border-radius: 20px;
 }
 
-.addoredit .table_list .table th {
+.table_list .table th {
   border: none;
 }
 
-@media (max-width: 1024px) {
-  .addoredit .table_list {
+@media (max-width: 768px) {
+  .table_list {
     width: 95%;
   }
 }
 
-@media (max-width: 767px) {
-  .addoredit .table_list {
-    width: 75%;
-  }
-}
-
-@media (max-width: 425px) {
-  .addoredit .table_list {
-    width: 95%;
-  }
-}
-
-.addoredit .sorted_table {
+.sorted_table {
   width: 90%;
   overflow: scroll;
 }
 
-.addoredit .sorted_table::-webkit-scrollbar {
+.sorted_table::-webkit-scrollbar {
   display: none;
 }
 
-.addoredit .sorted_table .sorted_tt_table {
+.sorted_table .sorted_tt_table {
   font-size: 12px;
 }
 
-.addoredit .sorted_table .sorted_tt_table tr td p {
+.sorted_table .sorted_tt_table tr td p {
   font-weight: 500;
 }
 
-.addoredit .sorted_table .sorted_tt_table .break {
+.sorted_table .sorted_tt_table .break {
   padding: none;
   margin: none;
   border: none;
@@ -591,68 +574,83 @@ body {
   width: 5px;
 }
 
-.addoredit .table-responsive {
-  height: 500px;
+.table-responsive {
+  height: 600px;
   border-radius: 20px;
-  overflow: hidden;
 }
 
-.addoredit table {
+.table-responsive::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #7a99d9), color-stop(0.72, #497dbd), color-stop(0.86, #1c3a94));
+}
+
+table {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-.addoredit thead {
+thead {
   text-align: center;
 }
 
-.addoredit tbody tr th {
+tbody tr th {
   font-size: 12px;
 }
 
-.addoredit .badge {
+.badge {
   border: solid 0.5px lightgrey;
 }
 
-.addoredit .header-fixed {
+.header-fixed {
   width: 100%;
 }
 
-.addoredit .header-fixed > thead,
-.addoredit .header-fixed > tbody,
-.addoredit .header-fixed > thead > tr,
-.addoredit .header-fixed > tbody > tr,
-.addoredit .header-fixed > thead > tr > th,
-.addoredit .header-fixed > tbody > tr > td {
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
   display: block;
 }
 
-.addoredit .header-fixed > tbody > tr:after,
-.addoredit .header-fixed > thead > tr:after {
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
   content: "";
   display: block;
   visibility: hidden;
   clear: both;
 }
 
-.addoredit .header-fixed > tbody {
+.header-fixed > tbody {
   overflow-y: scroll;
-  padding-bottom: 110px;
   max-height: 550px;
 }
 
-.addoredit .header-fixed > tbody::-webkit-scrollbar {
+.header-fixed > tbody::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0);
   width: 6px;
 }
 
-.addoredit .header-fixed > tbody::-webkit-scrollbar-track {
+.header-fixed > tbody::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0);
 }
 
-.addoredit .header-fixed > tbody::-webkit-scrollbar-thumb {
+.header-fixed > tbody::-webkit-scrollbar-thumb {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#c1dfc4), to(#deecdd));
   background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
   border-radius: 15px;
@@ -662,21 +660,20 @@ body {
   -o-border-radius: 15px;
 }
 
-.addoredit .header-fixed > tbody > tr > td,
-.addoredit .header-fixed > thead > tr > th {
+.header-fixed > tbody > tr > td,
+.header-fixed > thead > tr > th {
   width: 33%;
   float: left;
 }
 
-.addoredit .header-fixed tbody tr td .btn {
-  font-size: 12px;
-  width: 75px;
-  margin: 5px 0;
-}
-
 @media (max-width: 550px) {
-  .addoredit .header-fixed > tbody > tr > td {
+  .header-fixed > tbody > tr > td {
     font-size: 12px;
+  }
+  .header-fixed > tbody > tr > td .btn {
+    font-size: 12px;
+    width: 75px;
+    margin: 5px 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
